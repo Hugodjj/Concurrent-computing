@@ -28,7 +28,7 @@ void *elevar(void *arg) {
 
     t_Args *args = (t_Args *)arg;
 
-    for (int i = args->posicaoInicial; i <= args->posicaoFinal; i++) {
+    for (int i = args->posicaoInicial; i <= args->posicaoFinal; i++) { // A posição inicial e final variam de acordo com a thread.
         args->A[i] = args->A[i] * args->A[i];
     }
 
