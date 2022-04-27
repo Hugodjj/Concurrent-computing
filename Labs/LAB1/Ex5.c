@@ -1,3 +1,10 @@
+/* Disciplina: Computacao Concorrente */
+/* Prof.: Silvana Rossetto */
+/* Módulo 1 - Laboratório: 2 */
+/* Codigo: "Eleva todas as posições de um vetor ao quadrado" usando threads em C*/
+/* Nome: Hugo Nascimento da Silva*/
+/* DRE: 120152161*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
@@ -39,7 +46,7 @@ void *elevar(void *arg) {
 int main(void) {
     int aux[TAM];            // vetor auxiliar para ajudar com a verificação
     pthread_t tid[NTHREADS]; // identificador das threads
-    int *array = preencherArray();
+    int *array = preencherArray(); // criando um array sequencial
     t_Args *thread1, *thread2; // argumentos para as threads
 
     /*
