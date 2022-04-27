@@ -1,6 +1,6 @@
 /* Disciplina: Computacao Concorrente */
 /* Prof.: Silvana Rossetto */
-/* Módulo 1 - Laboratório: 2 */
+/* Módulo 1 - Laboratório: 1 */
 /* Codigo: "Eleva todas as posições de um vetor ao quadrado" usando threads em C*/
 /* Nome: Hugo Nascimento da Silva*/
 /* DRE: 120152161*/
