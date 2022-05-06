@@ -54,7 +54,6 @@ void *tarefa(void *arg){
             maiorMenor->menor_conc_thread = vetor[i];
         }
     }
-
     // retorna o resultado do maior e menor local
     pthread_exit((void *)maiorMenor);
 }
@@ -63,6 +62,7 @@ void preencher_vet(long int dim){
 
     for (long int i = 0; i < dim; i++)
         vetor[i] = 1000.1 / (i + 1);
+        
 }
 
 void alocar_memo(long int dim){
@@ -116,9 +116,6 @@ int main(int argc, char *argv[]){
     // maior e menor concorrente
     GET_TIME(ini);
 
-    maior_conc = vetor[0];
-    menor_conc = vetor[0];
-
     // criar as threads
     for (long int i = 0; i < nthreads; i++){
         if (pthread_create(tid + i, NULL, tarefa, (void *)i)){
@@ -126,27 +123,30 @@ int main(int argc, char *argv[]){
             return 3;
         }
     }
+
+    maior_conc = vetor[0];
+    menor_conc = vetor[0];
+
     // aguardar o termino das threads
     for (long int i = 0; i < nthreads; i++){
-        if (pthread_join(*(tid + i), (void **)&retorno)){
+        if (pthread_join(*(tid + i), (void**) &retorno)){
             fprintf(stderr, "ERRO--pthread_create\n");
             return 3;
-        }
         // vendo o maior e menor de cada thread
+        }
 
         if (maior_conc < retorno->maior_conc_thread){
             maior_conc = retorno->maior_conc_thread;
         }
-        if (menor_conc > retorno->maior_conc_thread){
+        if (menor_conc > retorno->menor_conc_thread){
             menor_conc = retorno->menor_conc_thread;
         }
     }
     GET_TIME(fim);
-    printf("Tempo concorrente:  %lf\n", fim - ini);
+    printf("\nTempo concorrente:  %lf\n", fim - ini);
 
     printf("Solucao Sequencial:\n");
     printf("O maior numero encontrado foi %lf e o menor foi %lf\n", maior_seq, menor_seq);
-    printf("\n");
     printf("Solucao Concorrente:\n");
     printf("O maior numero encontrado foi %lf e o menor foi %lf\n", maior_conc, menor_conc);
 
