@@ -1,6 +1,6 @@
 /* Disciplina: Computacao Concorrente */
 /* Prof.: Silvana Rossetto */
-/* Módulo 1 - Laboratório: 2 */
+/* Módulo 1 - Laboratório: 3 */
 /* Codigo: "Encontrar o maior e menor elemento em um vetor" usando threads em C*/
 /* Nome: Hugo Nascimento da Silva*/
 /* DRE: 120152161*/
