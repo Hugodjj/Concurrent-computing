@@ -36,3 +36,33 @@ que recebe um vetor de números reais e retorna o maior e menor número presente
     <td>0.179879</td>
   </tr>
 </table>
+
+## Ganho de tempo (em segundos)
+
+<table>
+  
+  <tr>
+    <th>Tamanho do vetor</th>
+    <th>Ganho com 1 thread</th>
+    <th>Ganho com 2 threads</th>
+    <th>Ganho com 4 threads</th>
+  </tr>
+  <tr>
+    <td>10^5</td>
+    <td>0.52504</td>
+    <td>0.99388</td>
+    <td>0.66056</td>
+  </tr>
+  <tr>
+    <td>10^7</td>
+    <td>0.09499</td>
+    <td>0.17466</td>
+    <td>1.13264</td>
+  </tr>
+  <tr>
+    <td>10^8</td>
+    <td>0.96641</td>
+    <td>1.39952</td>
+    <td>1.82095</td>
+  </tr>
+</table>
