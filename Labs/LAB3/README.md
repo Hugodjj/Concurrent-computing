@@ -66,3 +66,6 @@ que recebe um vetor de números reais e retorna o maior e menor número presente
     <td>1.82095</td>
   </tr>
 </table>
+
+
+O resultado não foi o esperado porque por vezes o tempo sequencial foi menor que o tempo concorrente.
