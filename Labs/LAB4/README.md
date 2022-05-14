@@ -61,3 +61,5 @@
     <td>3.26118</td>
   </tr>
 </table>
+
+Nosso programa concorrente em comparação com o sequencial conseguiu ser efetivo em todas as comparações, sempre havendo ganha de desempenho, com 1, 2 e 4 threads. Contudo, o programa concorrente ao utilizar 4 threads perde um pouco de desempenho nos vetores de tamanho 10^5 e 10^7. Em geral, o programa concorrente consegue ser 2.5x mais rápido que o programa sequencial.
