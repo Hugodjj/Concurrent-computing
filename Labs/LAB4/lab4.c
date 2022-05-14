@@ -1,3 +1,10 @@
+/* Disciplina: Computacao Concorrente */
+/* Prof.: Silvana Rossetto */
+/* Módulo 1 - Laboratório: 4 */
+/* Codigo: "Esse programa calcula e substitui pela raiz quadrada todos os números primos presentes no array." usando threads em C*/
+/* Nome: Hugo Nascimento da Silva*/
+/* DRE: 120152161*/
+
 #include <stdio.h>
 #include <stdlib.h> 
 #include <pthread.h>
