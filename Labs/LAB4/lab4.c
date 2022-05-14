@@ -43,7 +43,7 @@ void *tarefa(void* arg){
     }
     pthread_exit(NULL);
 }
-
+// Gerando vetores de números aleatórios
 void gerar_vet(int dim){
 
     srand(time(NULL));
@@ -100,11 +100,6 @@ int main(int argc, char *argv[]){
     alocar_memo(dim);
     gerar_vet(dim);
 
-    // printf("\n\nMATRIZZZ\n\n");
-    // for (long long int i = 0; i< dim; i++){
-    //     printf("%d ", vetorEntrada[i]);
-    // }
-
     GET_TIME(inicio);
     for (long long int i = 0; i< dim; i++){
 
@@ -115,10 +110,6 @@ int main(int argc, char *argv[]){
     }
     GET_TIME(fim);
     printf("\nTEMPO TEMPO TEMPO SEQUENCIAL: %lf\n", fim - inicio);
-
-    // for (long long int i = 0; i< dim; i++){
-    //     printf("%.1lf ", vetorSequencial[i]);
-    // }
 
     GET_TIME(inicio);
     pthread_mutex_init(&mutex,NULL);
@@ -139,6 +130,13 @@ int main(int argc, char *argv[]){
     pthread_mutex_destroy(&mutex);
     GET_TIME(fim);
     printf("\n\nTEMPO CONCORRENTEEE: %lf\n\n", fim - inicio);
+
+    // Corretude -- Verificando se os vetores são diferentes
+    for (long int i = 0; i<dim; i++){
+        if(vetorConcorrente[i] != vetorSequencial[i]){
+            return 1;
+        }
+    }
 
     free_memo();
 
