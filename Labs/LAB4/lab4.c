@@ -12,12 +12,16 @@
 #include <math.h>
 #include "timer.h"
 
-long long int dim;
-int *vetorEntrada, nthreads, varGlobal;
-float *vetorSequencial, *vetorConcorrente;
-pthread_mutex_t mutex;
-pthread_t *tid;
+long long int dim; // dimensão dos vetores
+// Vetor de entrada sera utilizado como base para criação dos vetores concorrentes,
+// nthreads são a quantidade de threads,
+// var global para a comunicação cas threads;
+int *vetorEntrada, nthreads, varGlobal; 
+float *vetorSequencial, *vetorConcorrente; 
+pthread_mutex_t mutex; // variavel para dar lock e impedir a condição de corrida
+pthread_t *tid; // identificador das threads no sistema.
 
+// função que verifica primalidade dos números.
 int ehPrimo(long long int n) {
     if (n<=1)
     return 0;
@@ -32,7 +36,7 @@ int ehPrimo(long long int n) {
         if(n%i==0) return 0;
     return 1;
 }
-
+// função das threads 
 void *tarefa(void* arg){
     float* vetorThreads = (float *) arg;
     int i = 0;
@@ -106,7 +110,7 @@ int main(int argc, char *argv[]){
 
     alocar_memo(dim);
     gerar_vet(dim);
-
+    // programa sequencial
     GET_TIME(inicio);
     for (long long int i = 0; i< dim; i++){
 
@@ -117,7 +121,7 @@ int main(int argc, char *argv[]){
     }
     GET_TIME(fim);
     printf("\nTEMPO TEMPO TEMPO SEQUENCIAL: %lf\n", fim - inicio);
-
+    // programa concorrente
     GET_TIME(inicio);
     pthread_mutex_init(&mutex,NULL);
 
