@@ -1,3 +1,10 @@
+/* Disciplina: Computacao Concorrente */
+/* Prof.: Silvana Rossetto */
+/* Módulo 2 - Laboratório: 5 */
+/* Codigo: "Esse programa printa frases em uma determinada ordem." usando threads em C*/
+/* Nome: Hugo Nascimento da Silva*/
+/* DRE: 120152161*/
+
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
