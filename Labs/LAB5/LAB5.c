@@ -125,7 +125,7 @@ int main(int argc, char *argv[]){
     }
     printf ("\nFIM\n");
 
-    // destrói as variáveis globais
+    // desaloca memória e destrói as variáveis globais
     pthread_mutex_destroy(&x_mutex);
     pthread_cond_destroy(&x_cond);
 
