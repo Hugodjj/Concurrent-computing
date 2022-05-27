@@ -1,3 +1,9 @@
+/* Disciplina: Computacao Concorrente */
+/* Prof.: Silvana Rossetto */
+/* Módulo 2 - Laboratório: 6 */
+/* Nome: Hugo Nascimento da Silva*/
+/* DRE: 120152161*/
+
 #include<pthread.h>
 #include<stdio.h>
 #include<stdlib.h>
