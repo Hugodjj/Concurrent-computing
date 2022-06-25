@@ -1,6 +1,9 @@
 /* Disciplina: Computacao Concorrente */
 /* Prof.: Silvana Rossetto */
+/* Módulo 2 - Laboratório: 8 */
 /* Codigo: Leitores e escritores usando monitores em Java */
+/* Nome: Hugo Nascimento da Silva*/
+/* DRE: 120152161*/
 /* -------------------------------------------------------------------*/
 
 // classe para recurso compatilhado
