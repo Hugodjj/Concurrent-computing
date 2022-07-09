@@ -6,7 +6,7 @@ Para o algoritmo funcionar corretamente, todos os semáforos devem ser inicializ
 
 ### (b) É possível simplificar esse codigo (reduzir o uso dos mecanismos de sincronizacão)?
 
-Utilizando semáforos, acredito que não porque os 4 semáforos são necessários para haver sincronização entre as threads leitoras-escritoras e também internamente entre leitoras-leitoras e escritoras-escritoras.
+Utilizando semáforos, acredito que não porque os 4 semáforos são necessários para haver sincronização entre as threads leitoras-escritoras e também internamente entre leitoras-leitoras e escritoras-escritoras. Utilizando variáveis de condição, só precisariamos utilizar 3 váriaveis, pthread_mutex_t mutex; pthread_cond_t cond_leit, cond_escr;
 
 ### (c) Implemente um programa em C para experimentar esse algoritmo. Inclua mensagens de log para acompanhar a execução e verificar a sua corretude. Teste seu programa variando o numero de threads “leitoras” e “escritoras”. Certifique-se  ́que ele funciona em todos os casos.
 ## Exemplo de saída do programa
